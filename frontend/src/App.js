@@ -43,7 +43,7 @@ function App() {
   }
 
   return (
-    <Router basename="/dummyApp">
+    <Router basename="/DummyApp">
       <Container fluid className="App p-0">
         <Row className="flex-nowrap d-flex w-100 m-0">
           <Col xs={2} md={2} className="sidebar-container p-0">

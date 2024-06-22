@@ -1,0 +1,65 @@
+.nav-pills li a:hover{
+  background-color: rgb(218, 218, 221);
+}
+.navbar-container {
+  min-height: 100vh;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  width: 15%;
+}
+
+.sidebar {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 20%;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .dropdown-toggle span {
+    display: none;
+  }
+}
+.custom-dropdown-toggle {
+  background-color: white !important; 
+  border: none !important; 
+  color: black !important; 
+}
+
+.custom-dropdown-toggle.active {
+  background-color: #f0f0f0 !important; 
+}
+
+.custom-dropdown-item {
+  background-color: white !important; 
+  color: black !important; 
+}
+
+.custom-dropdown-item:hover {
+  background-color: #f0f0f0 !important;
+  color: black !important; 
+}
+
+.custom-dropdown-item:active {
+  background-color: #dcdcdc !important; 
+  color: black !important; 
+}

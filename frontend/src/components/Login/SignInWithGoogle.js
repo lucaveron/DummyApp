@@ -14,7 +14,7 @@ function SignInwithGoogle() {
         toast.success("Te has logueado correctamente", {
           position: "top-center"
         });
-        navigate("/profile");
+        navigate("/posts");
       }
     });
   }

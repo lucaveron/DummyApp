@@ -105,7 +105,7 @@ const PostList = () => {
                   <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
                     <Form.Control
                       type="text"
-                      placeholder="Search"
+                      placeholder="Filrar por tag"
                       value={searchValue}
                       onChange={handleSearchChange}
                       onFocus={handleSearchFocus}

@@ -26,7 +26,7 @@ const PostList = () => {
   const [searchValue, setSearchValue] = useState('');
   const inputRef = useRef(null);
   const navigate = useNavigate();
-  const apiKey = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  const apiKey = process.env.REACT_APP_DUMMY_API_KEY;
   console.log(apiKey);
 
   useEffect(() => {

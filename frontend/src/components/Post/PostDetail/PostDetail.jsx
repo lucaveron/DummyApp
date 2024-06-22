@@ -15,7 +15,7 @@ const PostDetail = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
-  const apiKey = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  const apiKey = process.env.REACT_APP_DUMMY_API_KEY;
 
   useEffect(() => {
     // info del post

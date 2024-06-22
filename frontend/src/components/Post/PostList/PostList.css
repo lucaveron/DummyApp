@@ -47,7 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: auto; /* Añadido para empujar los tags al fondo */
+  margin-top: auto; 
 }
 
 .post-tag {

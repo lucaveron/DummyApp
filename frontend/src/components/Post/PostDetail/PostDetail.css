@@ -20,9 +20,9 @@
 }
 
 .post-owner-image {
-    width: 15%; /* Ajuste del tamaño en porcentaje */
+    width: 15%; 
     height: auto;
-    max-width: 50px; /* Límite de tamaño máximo */
+    max-width: 50px; 
     margin-right: 15px;
 }
 

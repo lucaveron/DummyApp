@@ -26,18 +26,20 @@ const PostList = () => {
   const [searchValue, setSearchValue] = useState('');
   const inputRef = useRef(null);
   const navigate = useNavigate();
+  const apiKey = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  console.log(apiKey);
 
   useEffect(() => {
     //traer los datos de la api
     fetch('https://dummyapi.io/data/v1/post', {
-      headers: { 'app-id': '6674899d454e0e76a9fa0623' }
+      headers: { 'app-id': apiKey }
     })
       .then(response => response.json())
       .then(data => setPosts(data.data))
       .catch(error => console.error('Error fetching posts:', error));
 
     fetch('https://dummyapi.io/data/v1/tag', {
-      headers: { 'app-id': '6674899d454e0e76a9fa0623' }
+      headers: { 'app-id': apiKey }
     })
       .then(response => response.json())
       .then(data => {
@@ -54,7 +56,7 @@ const PostList = () => {
     setShowTags(false);
   };
 
-  const handlePostDoubleClick = (id) => {
+  const handlePostClick = (id) => {
     //envio a details
     navigate(`/post/${id}`);
   };
@@ -125,7 +127,7 @@ const PostList = () => {
               </Col>
             
               <Col xs="auto">
-                <Button variant="secondary" onClick={handleClearTags}>Clear</Button>
+                <Button variant="secondary" onClick={handleClearTags}>Limpiar</Button>
               </Col>
             </Row>
           </Form>
@@ -135,7 +137,7 @@ const PostList = () => {
         {filteredPosts.length > 0 ? (
           filteredPosts.map(post => (
             <Col xs={12} md={8} lg={6} key={post.id} className="mb-4">
-              <Card onDoubleClick={() => handlePostDoubleClick(post.id)} className="post-item mx-auto">
+              <Card onClick={() => handlePostClick(post.id)} className="post-item mx-auto">
                 <Card.Img variant="top" src={post.image} alt={post.text} className="post-item-image" />
                 <Card.Body>
                   <Card.Title>{post.text}</Card.Title>

@@ -1,6 +1,4 @@
 .App {
-  display: flex;
-  flex-direction: row;
   min-height: 100vh;
 }
 
@@ -11,18 +9,13 @@
 }
 
 .main-content {
-  flex: 1;
   background-color: #fafafa;
-  padding: 20px;
+  min-height: 100vh;
 }
 
-/* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
   .sidebar-container {
-    width: 20%;
-  }
+  width: 20%;
+}
 
-  .main-content {
-    margin-left: 20%;
-  }
 }

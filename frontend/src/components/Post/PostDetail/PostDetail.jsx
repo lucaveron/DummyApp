@@ -15,19 +15,20 @@ const PostDetail = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
+  const apiKey = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
   useEffect(() => {
-    // Obtener detalles del post
+    // info del post
     fetch(`https://dummyapi.io/data/v1/post/${id}`, {
-      headers: { "app-id": "6674899d454e0e76a9fa0623" },
+      headers: { "app-id": apiKey },
     })
       .then((response) => response.json())
       .then((data) => setPost(data))
       .catch((error) => console.error("Error fetching post:", error));
 
-    // Obtener comentarios del post
+    // comentarios del post
     fetch(`https://dummyapi.io/data/v1/post/${id}/comment`, {
-      headers: { "app-id": "6674899d454e0e76a9fa0623" },
+      headers: { "app-id": apiKey },
     })
       .then((response) => response.json())
       .then((data) => setComments(data.data))

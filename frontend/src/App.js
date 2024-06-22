@@ -7,6 +7,7 @@ import { auth } from "./components/firebase";
 import PostList from "./components/Post/PostList/PostList";
 import PostDetail from "./components/Post/PostDetail/PostDetail";
 import Sidebar from "./components/Sidebar/Sidebar";
+import About from "./components/About/About";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
@@ -42,9 +43,9 @@ function App() {
   }
 
   return (
-    <Router>
-      <Container fluid className="App d-flex p-0">
-        <Row className="flex-nowrap w-100 m-0">
+    <Router basename="/dummyApp">
+      <Container fluid className="App p-0">
+        <Row className="flex-nowrap d-flex w-100 m-0">
           <Col xs={2} md={2} className="sidebar-container p-0">
             <Sidebar />
           </Col>
@@ -53,6 +54,7 @@ function App() {
               <Route path="/posts" element={<PostList />} />
               <Route path="*" element={<Navigate to="/posts" />} />
               <Route path="/post/:id" element={<PostDetail />} />
+              <Route path="about" element={<About />} />
             </Routes>
           </Col>
         </Row>

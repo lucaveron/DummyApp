@@ -33,8 +33,8 @@ const Sidebar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleMenuClick = (e) => {
-    e.preventDefault(); // Previene la navegación
-    setShowDropdown(false); // Cierra el dropdown
+    e.preventDefault(); // para no navegar
+    setShowDropdown(false); 
   };
 
   const toggleDropdown = () => {
@@ -59,7 +59,7 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="nav-item my-2">
-              <Link to="/buendia" className="nav-link text-dark fs-5">
+              <Link to="/about" className="nav-link text-dark fs-5">
                 <FaInfoCircle />
                 <span className="ms-3">About</span>
               </Link>

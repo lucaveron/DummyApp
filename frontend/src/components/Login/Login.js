@@ -17,22 +17,22 @@ function Login() {
           <h3>Login</h3>
 
           <div className="mb-3">
-            <label>Email address</label>
+            <label>Email</label>
             <input
               type="email"
               className="form-control"
-              placeholder="Enter email"
+              placeholder="Dirección de correo"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label>Password</label>
+            <label>Contraseña</label>
             <input
               type="password"
               className="form-control"
-              placeholder="Enter password"
+              placeholder="Ingrese Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -40,8 +40,9 @@ function Login() {
 
           <div className="d-grid">
             <button type="submit" className="disabled btn btn-primary">
-              Submit
+              Ingresar
             </button>
+            <p style={{ fontSize: '12px'}}>Este login es de muestra, Solo se puede ingresar con google</p>
           </div>
           <SignInwithGoogle />
         </form>

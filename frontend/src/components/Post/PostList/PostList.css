@@ -1,0 +1,76 @@
+.post-list-container {
+  padding-top: 20px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag-badge {
+  cursor: pointer;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.post-item-image {
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.custom-dropdown-menu li {
+  white-space: nowrap;
+}
+
+.custom-dropdown-menu {
+  max-height: 50vh; 
+  overflow-y: auto;
+  min-width: 15ch; 
+  max-width: 25ch; 
+  white-space: nowrap;
+}
+
+.post-tags-container {
+  background-color: #e0e0e0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto; /* Añadido para empujar los tags al fondo */
+}
+
+.post-tag {
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 15ch; 
+}
+
+.no-posts-message {
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin-top: 2rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

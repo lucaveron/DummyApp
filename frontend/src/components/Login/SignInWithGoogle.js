@@ -10,18 +10,11 @@ function SignInwithGoogle() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider).then(async (result) => {
       console.log(result);
-      const user = result.user;
-      if (result.user) {
-        await setDoc(doc(db, "Users", user.uid), {
-          email: user.email,
-          firstName: user.displayName,
-          photo: user.photoURL,
-          lastName: "",
+      if (result.user){
+        toast.success("Te has logueado correctamente", {
+          position: "top-center"
         });
-        toast.success("User logged in Successfully", {
-          position: "top-center",
-        });
-       navigate('/profile')
+        navigate("/profile");
       }
     });
   }

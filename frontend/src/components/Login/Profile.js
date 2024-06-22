@@ -18,26 +18,21 @@ function Profile() {
     try {
       await auth.signOut();
       window.location.href = "/login";
-      console.log("User logged out successfully!");
     } catch (error) {
-      console.error("Error logging out:", error.message);
+      console.error("Error Deslogueandose:", error.message);
     }
   }
+
   return (
     <div>
       {userDetails ? (
         <>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-            <img src={userDetails.photoURL}
-            width={"40%"}
-            style={{borderRadius: "50%"}}/>
-
-        </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <img
-              src={userDetails.photo}
+              src={userDetails.photoURL}
               width={"40%"}
               style={{ borderRadius: "50%" }}
+              alt="ProfileImage"
             />
           </div>
           <h3>Welcome {userDetails.displayName}</h3>

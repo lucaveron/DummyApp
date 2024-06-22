@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar-container {
+  background-color: white;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  width: 15%;
+}
+
+.main-content {
+  margin-left: 15%;
+  flex: 1;
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 20%;
+  }
+
+  .main-content {
+    margin-left: 20%;
+  }
+}

@@ -34,7 +34,7 @@ function App() {
 
   if (!user) {
     return (
-      <Router>
+      <Router basename="/DummyApp">
         <div className="d-flex justify-content-center align-items-center vh-100">
           <Login />
         </div>
